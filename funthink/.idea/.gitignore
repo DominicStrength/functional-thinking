@@ -13,6 +13,7 @@ out/
 
 .idea_modules/
 .idea
+.idea/
 .gitignore
 
 *.iml
