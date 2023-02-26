@@ -1,7 +1,5 @@
 package chapter.ch01_why;
 
-import com.sun.source.tree.Tree;
-
 import java.util.*;
 import java.util.regex.Matcher;
 import java.util.regex.Pattern;
@@ -45,7 +43,7 @@ public class 패러다임의전환 {
         regexToList(words, "\\w+").stream()
                 .map(w -> w.toLowerCase())
                 .filter(w -> !NON_WORDS.contains(w))
-                .forEach(w -> wordMap.put(w, wordMap.getOrDefault(w, 0) + 1));
+                .forEach(w -> wordMap.put(w, wordMap.getOrDefault(w, 0) + 1)); // getOrDefault(Object key, V DefaultValue) -> 키에 대한 값이 null 일 경우 디폴트 값 리턴
         return wordMap;
     }
 
